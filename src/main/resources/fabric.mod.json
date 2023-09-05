@@ -18,7 +18,7 @@
 		"main": [
           "net.ianmhuff.picktool.PickTool"
 		],
-		"main": [
+		"client": [
           "net.ianmhuff.picktool.PickToolClient"
 		],
 		"fabric-datagen": [
