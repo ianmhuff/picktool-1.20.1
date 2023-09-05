@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "picktool",
+	"version": "${version}",
+	"name": "Pick Tool",
+	"description": "Automagically swap to the right tool for the job!",
+	"authors": [
+		"Ian Huff"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/picktool/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "net.ianmhuff.picktool.PickTool"
+		],
+		"main": [
+          "net.ianmhuff.picktool.PickToolClient"
+		],
+		"fabric-datagen": [
+			"net.ianmhuff.picktool.PickToolDataGenerator"
+		]
+	},
+	"mixins": [
+		"picktool.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
