@@ -16,17 +16,15 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-          "net.ianmhuff.picktool.PickTool"
 		],
 		"client": [
           "net.ianmhuff.picktool.PickToolClient"
 		],
-		"fabric-datagen": [
-			"net.ianmhuff.picktool.PickToolDataGenerator"
+		"modmenu": [
+			"net.ianmhuff.picktool.ModMenuIntegration"
 		]
 	},
 	"mixins": [
-		"picktool.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.14.22",
@@ -36,5 +34,10 @@
 	},
 	"suggests": {
 		"another-mod": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"update_checker": false
+		}
 	}
 }
