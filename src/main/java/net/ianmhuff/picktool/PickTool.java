@@ -27,7 +27,7 @@ import static net.minecraft.util.hit.HitResult.Type.BLOCK;
 //TODO make the default key not conflict with any of my other mods
 //TODO find a way to go Silk->OtherTool->Silk instead of Silk->Other->Fortune->Silk
 
-//TODO translation keys?
+//TODO translation keys
 
 public class PickTool implements ClientModInitializer {
 
