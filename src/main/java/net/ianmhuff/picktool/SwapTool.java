@@ -24,17 +24,7 @@ import static net.ianmhuff.picktool.PickToolClient.*;
 import static net.minecraft.registry.tag.ItemTags.*;
 import static net.minecraft.util.hit.HitResult.Type.BLOCK;
 
-//TODO make the default key not conflict with any of my other mods
-//TODO find a way to go Silk->OtherTool->Silk instead of Silk->Other->Fortune->Silk
 
-//TODO add a second keybinding that rotates through all tools in the inventory
-//  maybe have a separate class for this
-//  add a config option to set the default tool for this
-//    as in the first tool it always picks? in hindsight this seems strange
-//  also add a separate selected slot toggle for this input
-//    this also seems strange in hindsight hmmmm
-
-//TODO translation keys?
 
 public class SwapTool implements ClientModInitializer {
 

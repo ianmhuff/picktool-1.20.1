@@ -27,13 +27,6 @@ import static net.minecraft.util.hit.HitResult.Type.BLOCK;
 //TODO make the default key not conflict with any of my other mods
 //TODO find a way to go Silk->OtherTool->Silk instead of Silk->Other->Fortune->Silk
 
-//TODO add a second keybinding that rotates through all tools in the inventory
-//  maybe have a separate class for this
-//  add a config option to set the default tool for this
-//    as in the first tool it always picks? in hindsight this seems strange
-//  also add a separate selected slot toggle for this input
-//    this also seems strange in hindsight hmmmm
-
 //TODO translation keys?
 
 public class PickTool implements ClientModInitializer {
@@ -90,11 +83,11 @@ public class PickTool implements ClientModInitializer {
 
         MinecraftClient client = MinecraftClient.getInstance();
 
-        //pick tool key binding - defaults to R key
+        //pick tool key binding - defaults to T key
         KeyBinding keyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.picktool.picktool", // The translation key of the keybinding's name
                 InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
-                GLFW.GLFW_KEY_R, // The keycode of the key
+                GLFW.GLFW_KEY_T, // The keycode of the key
                 "category.picktool.keybindings" // The translation key of the keybinding's category.
         ));
 
