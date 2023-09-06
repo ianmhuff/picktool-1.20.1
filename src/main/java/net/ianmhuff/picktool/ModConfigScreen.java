@@ -16,8 +16,7 @@ import static net.ianmhuff.picktool.PickToolClient.selectSlot;
 import static net.ianmhuff.picktool.PickToolClient.checkHotbar;
 
 //TODO center the slider bar for slot selection
-//TODO see top of PickToolClient for other configs to implement
-//TODO translation keys
+
 
 @Environment(EnvType.CLIENT)
 public class ModConfigScreen extends Screen implements ModMenuApi {
@@ -52,13 +51,13 @@ public class ModConfigScreen extends Screen implements ModMenuApi {
                 20,
                 200,
                 20,
-                Text.of("Tool Slot: " + (toolSlot + 1)),
+                Text.translatable("config.picktool.toolslot.button").append(String.valueOf(toolSlot + 1)),
                 (double) (toolSlot) / 8.0
         ) {
             @Override
             protected void updateMessage() {
                 // Update the label that shows the selected value
-                setMessage(Text.of("Tool Slot: " + ((int) (this.value * 8.0) + 1)));
+                setMessage(Text.translatable("config.picktool.toolslot.button").append(String.valueOf((int) (this.value * 8.0) + 1)));
             }
 
             @Override
@@ -72,25 +71,25 @@ public class ModConfigScreen extends Screen implements ModMenuApi {
 
 
         final ButtonWidget selectSlotButton = ButtonWidget.builder(
-            Text.of("Select Slot: " + selectSlot),
+            Text.translatable("config.picktool.selectslot.button").append(String.valueOf(selectSlot)),
             button -> {
                 selectSlot = !selectSlot;
-                button.setMessage(Text.of("Select Slot: " + selectSlot));
+                button.setMessage(Text.translatable("config.picktool.selectslot.button").append(String.valueOf(selectSlot)));
             } )
             .dimensions(width / 2 + 5, 20, 200, 20)
-            .tooltip(Tooltip.of(Text.of("Automatically select tool slot when tool is picked")))
+            .tooltip(Tooltip.of(Text.translatable("config.picktool.selectslot.tooltip")))
             .build();
         this.addDrawableChild(selectSlotButton);
 
 
         final ButtonWidget checkHotbarButton = ButtonWidget.builder(
-            Text.of("Check Hotbar: " + checkHotbar),
+            Text.translatable("config.picktool.checkhotbar.button").append(String.valueOf(checkHotbar)),
             button -> {
                 checkHotbar = !checkHotbar;
-                button.setMessage(Text.of("Check Hotbar: " + checkHotbar));
+                button.setMessage(Text.translatable("config.picktool.checkhotbar.button").append(String.valueOf(checkHotbar)));
             } )
             .dimensions(width / 2 - 205, 50, 200, 20)
-            .tooltip(Tooltip.of(Text.of("Check hotbar slots when looking for applicable tools")))
+            .tooltip(Tooltip.of(Text.translatable("config.picktool.checkhotbar.tooltip")))
             .build();
         this.addDrawableChild(checkHotbarButton);
 
