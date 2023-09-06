@@ -5,10 +5,15 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.gui.tooltip.Tooltip;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.gui.widget.SliderWidget;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+
+import static net.ianmhuff.picktool.PickToolClient.toolSlot;
+import static net.ianmhuff.picktool.PickToolClient.selectSlot;
+import static net.ianmhuff.picktool.PickToolClient.checkHotbar;
 
 //TODO center the slider bar for slot selection
 //TODO see top of PickToolClient for other configs to implement
@@ -41,13 +46,14 @@ public class ModConfigScreen extends Screen implements ModMenuApi {
     @Override
     protected void init() {
 
+        //slider for tool slot
         SliderWidget toolSlotSlider = new SliderWidget(
                 this.width / 2 - 205,
                 20,
                 200,
                 20,
-                Text.of("Tool Slot: " + (PickToolClient.toolSlot + 36)),
-                (double) PickToolClient.toolSlot / 8.0
+                Text.of("Tool Slot: " + (toolSlot + 1)),
+                (double) (toolSlot) / 8.0
         ) {
             @Override
             protected void updateMessage() {
@@ -57,21 +63,37 @@ public class ModConfigScreen extends Screen implements ModMenuApi {
 
             @Override
             protected void applyValue() {
-                PickToolClient.toolSlot = (int) (this.value * 8.0);
+                toolSlot = ((int) (this.value * 8.0));
             }
         };
 
         // Add the slider to the screen
         this.addDrawableChild(toolSlotSlider);
 
-        /*
-        final ButtonWidget selectSlotButton = ButtonWidget.builder(Text.translatable("Select Slot"),
-                        button -> System.out.println("button2 pressed") )
-                .dimensions(width / 2 + 5, 20, 200, 20)
-                .tooltip(Tooltip.of(Text.literal("Select tool slot when tool is picked")))
-                .build();
+
+        final ButtonWidget selectSlotButton = ButtonWidget.builder(
+            Text.of("Select Slot: " + selectSlot),
+            button -> {
+                selectSlot = !selectSlot;
+                button.setMessage(Text.of("Select Slot: " + selectSlot));
+            } )
+            .dimensions(width / 2 + 5, 20, 200, 20)
+            .tooltip(Tooltip.of(Text.of("Automatically select tool slot when tool is picked")))
+            .build();
         this.addDrawableChild(selectSlotButton);
-        */
+
+
+        final ButtonWidget checkHotbarButton = ButtonWidget.builder(
+            Text.of("Check Hotbar: " + checkHotbar),
+            button -> {
+                checkHotbar = !checkHotbar;
+                button.setMessage(Text.of("Check Hotbar: " + checkHotbar));
+            } )
+            .dimensions(width / 2 - 205, 50, 200, 20)
+            .tooltip(Tooltip.of(Text.of("Check hotbar slots when looking for applicable tools")))
+            .build();
+        this.addDrawableChild(checkHotbarButton);
+
 
         final ButtonWidget doneButton = ButtonWidget.builder(Text.translatable("Done"),
                         button -> client.setScreen(this.parent))

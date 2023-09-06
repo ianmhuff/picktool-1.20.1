@@ -8,8 +8,7 @@
 		"Ian Huff"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/ianmhuff/picktool-1.20.1"
 	},
 	"license": "MIT",
 	"icon": "assets/picktool/icon.png",
@@ -18,14 +17,13 @@
 		"main": [
 		],
 		"client": [
-          "net.ianmhuff.picktool.PickToolClient"
+			"net.ianmhuff.picktool.PickTool",
+			"net.ianmhuff.picktool.SwapTool"
 		],
 		"modmenu": [
 			"net.ianmhuff.picktool.ModMenuIntegration"
 		]
 	},
-	"mixins": [
-	],
 	"depends": {
 		"fabricloader": ">=0.14.22",
 		"minecraft": "~1.20.1",
