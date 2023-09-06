@@ -35,8 +35,6 @@ public class PickTool implements ClientModInitializer {
 
     public void getNextTool(TagKey<Item> toolType, MinecraftClient client) {
 
-        System.out.println("here");
-
         if(checkHotbar) { firstSlot = 0; }
         else { firstSlot = 9; }
 
