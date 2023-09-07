@@ -1,7 +1,7 @@
 {
+  "category.picktool.keybindings": "Pick Tool Mod",
   "key.picktool.picktool": "Pick Tool",
   "key.picktool.swaptool": "Swap Tool",
-  "category.picktool.keybindings": "Pick Tool Mod",
   "config.picktool.toolslot.button": "Tool Slot: ",
   "config.picktool.toolslot.tooltip": "Which hotbar slot to automatically move tools to",
   "config.picktool.selectslot.button": "Select Slot: ",

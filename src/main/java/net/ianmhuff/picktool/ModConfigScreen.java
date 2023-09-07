@@ -64,9 +64,11 @@ public class ModConfigScreen extends Screen implements ModMenuApi {
             protected void applyValue() {
                 toolSlot = ((int) (this.value * 8.0));
             }
-        };
 
-        // Add the slider to the screen
+        };
+        //add tooltip
+        toolSlotSlider.setTooltip(Tooltip.of(Text.translatable("config.picktool.toolslot.tooltip")));
+        // add the slider to the screen
         this.addDrawableChild(toolSlotSlider);
 
 

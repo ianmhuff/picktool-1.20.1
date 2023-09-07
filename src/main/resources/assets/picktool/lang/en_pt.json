@@ -1,0 +1,12 @@
+{
+  "category.picktool.keybindings": "Pick Tool Mod",
+  "key.picktool.picktool": "Choose yer tool",
+  "key.picktool.swaptool": "Switch yer tool",
+  "config.picktool.toolslot.button": "Tool Holster: ",
+  "config.picktool.toolslot.tooltip": "Where to holster yer tools",
+  "config.picktool.selectslot.button": "Wield Tool: ",
+  "config.picktool.selectslot.tooltip": "Wield yer tools immediately",
+  "config.picktool.checkhotbar.button": "Check Holsters: ",
+  "config.picktool.checkhotbar.tooltip": "Check all yer holsters when lookin' for a tool"
+}
+

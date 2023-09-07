@@ -1,0 +1,12 @@
+{
+  "category.picktool.keybindings": "Pick Tool Mod",
+  "key.picktool.picktool": "Select Thy Tool",
+  "key.picktool.swaptool": "Survey Available Equipage",
+  "config.picktool.toolslot.button": "Determine Equipage Belt-loop: ",
+  "config.picktool.toolslot.tooltip": "Which belt-loop is to be used for the keeping of drawn equipage",
+  "config.picktool.selectslot.button": "Practise With Haste: ",
+  "config.picktool.selectslot.tooltip": "Grasp thy tool promptly upon selecting it",
+  "config.picktool.checkhotbar.button": "Refer To Thy Belt-loops: ",
+  "config.picktool.checkhotbar.tooltip": "Observe what lies upon thy belt when divining the proper equipage for the task"
+}
+
