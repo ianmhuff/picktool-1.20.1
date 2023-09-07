@@ -3,14 +3,14 @@
 	"id": "picktool",
 	"version": "${version}",
 	"name": "Pick Tool",
-	"description": "Automagically swap to the right tool for the job!",
+	"description": "Swap tools on the fly for a smoother and less cluttered experience.",
 	"authors": [
 		"Ian Huff"
 	],
 	"contact": {
 		"sources": "https://github.com/ianmhuff/picktool-1.20.1"
 	},
-	"license": "MIT",
+	"license": "GPL-3",
 	"icon": "assets/picktool/icon.png",
 	"environment": "*",
 	"entrypoints": {
