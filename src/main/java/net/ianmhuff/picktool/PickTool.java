@@ -78,11 +78,11 @@ public class PickTool implements ClientModInitializer {
 
         MinecraftClient client = MinecraftClient.getInstance();
 
-        //pick tool key binding - defaults to T key
+        //pick tool key binding - defaults to Z key
         KeyBinding keyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.picktool.picktool", // The translation key of the keybinding's name
                 InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
-                GLFW.GLFW_KEY_T, // The keycode of the key
+                GLFW.GLFW_KEY_Z, // The keycode of the key
                 "category.picktool.keybindings" // The translation key of the keybinding's category.
         ));
 

@@ -35,11 +35,11 @@ public class SwapTool implements ClientModInitializer {
 
         MinecraftClient client = MinecraftClient.getInstance();
 
-        //pick tool key binding - defaults to G key
+        //pick tool key binding - defaults to B key
         KeyBinding keyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.picktool.swaptool", // The translation key of the keybinding's name
                 InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
-                GLFW.GLFW_KEY_G, // The keycode of the key
+                GLFW.GLFW_KEY_B, // The keycode of the key
                 "category.picktool.keybindings" // The translation key of the keybinding's category.
         ));
 
