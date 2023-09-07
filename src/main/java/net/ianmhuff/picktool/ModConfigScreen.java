@@ -15,7 +15,7 @@ import static net.ianmhuff.picktool.PickToolClient.toolSlot;
 import static net.ianmhuff.picktool.PickToolClient.selectSlot;
 import static net.ianmhuff.picktool.PickToolClient.checkHotbar;
 
-//TODO center the slider bar for slot selection
+//TODO center the slider bar for slot selection - subtract a value?
 
 
 @Environment(EnvType.CLIENT)
