@@ -24,7 +24,7 @@ import static net.ianmhuff.picktool.PickToolClient.checkHotbar;
 import static net.minecraft.registry.tag.ItemTags.*;
 import static net.minecraft.util.hit.HitResult.Type.BLOCK;
 
-//TODO find a way to go Silk->OtherTool->Silk instead of Silk->Other->Fortune->Silk
+//TODO find a way to go Silk->Other Tool->Silk instead of Silk->Other->Fortune->Silk
 
 public class PickTool implements ClientModInitializer {
 
