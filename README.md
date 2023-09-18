@@ -15,9 +15,10 @@ A tool management mod for Minecraft 1.20.1
 ## About:
 
 This is a mod for Minecraft 1.20.1 that allows for fast and clean management of tools in the hotbar.
-I created this mod because I found swapping tools to be a more combersome process in this game than in similar games such as Terraria, especially with the recent indroduction of the hoe as a common tool type.
-In my opinion, tools take up too many valuable hotbar slots. "Saving" these slots would enable players to more efficiently build and fight in the game.
+I created this mod because I found swapping tools to be a more combersome process in this game than in games with similar inventory and tool systems, such as Terraria.
+This has become especially true with the recent indroduction of the hoe as a relatively common tool type in Minecraft.
 
+In my opinion, tools take up too many valuable hotbar slots. "Saving" these slots would enable players to more efficiently build and fight in the game.
 The main inspiration for this mod was the game's own "Pick Block" feature, which allows players to automatically swap block items into their hotbar as long as they are looking at the block they desire.
 However, this feature only works for blocks, even though a significant portion of the player's hotbar is usually taken up by their tools.
 
@@ -64,3 +65,8 @@ When this option is set to false, tools that are already in your hotbar will be 
 
 The default setting is true.
 
+
+
+## Notes
+
+Currently, the only types of tools supported by the mod are pickaxes, shovels, axes, and hoes. I am planning on adding support for more unique tyes of tools, such as shears, in the future, as well as some configuration options for players to customize how the mod behaves with regards to these unique tool types.
